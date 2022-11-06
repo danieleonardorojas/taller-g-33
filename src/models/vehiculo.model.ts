@@ -5,27 +5,20 @@ export class Vehiculo extends Entity {
   @property({
     type: 'string',
     id: true,
-    generated: true,
+    generated: false,
+    required: true,
   })
-  placa?: string;
+  idplaca: string;
 
   @property({
     type: 'string',
-    required: true,
   })
-  tipo: string;
-
-  @property({
-    type: 'string',
-    required: true,
-  })
-  marca: string;
+  marca?: string;
 
   @property({
     type: 'number',
-    required: true,
   })
-  modelo: number;
+  modelo?: number;
 
   @property({
     type: 'number',
@@ -40,7 +33,7 @@ export class Vehiculo extends Entity {
   @property({
     type: 'string',
   })
-  paisOrigen?: string;
+  paisorigen?: string;
 
   @property({
     type: 'string',

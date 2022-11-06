@@ -1,13 +1,13 @@
 import {Entity, model, property} from '@loopback/repository';
 
 @model()
-export class Propietario extends Entity {
+export class Jefeoperaciones extends Entity {
   @property({
     type: 'string',
     id: true,
     generated: true,
   })
-  idpropietario?: string;
+  idJefeoperaciones?: string;
 
   @property({
     type: 'string',
@@ -17,8 +17,9 @@ export class Propietario extends Entity {
 
   @property({
     type: 'string',
+    required: true,
   })
-  apellidos?: string;
+  apellidos: string;
 
   @property({
     type: 'string',
@@ -48,34 +49,22 @@ export class Propietario extends Entity {
     type: 'string',
     required: true,
   })
-  ciudadresidencia: string;
-
-  @property({
-    type: 'string',
-    required: true,
-  })
-  correo: string;
+  nivelestudio: string;
 
   @property({
     type: 'array',
     itemType: 'string',
   })
-  listavehiculos?: string[];
-
-  @property({
-    type: 'array',
-    itemType: 'string',
-  })
-  listanotificaciones?: string[];
+  sede?: string[];
 
 
-  constructor(data?: Partial<Propietario>) {
+  constructor(data?: Partial<Jefeoperaciones>) {
     super(data);
   }
 }
 
-export interface PropietarioRelations {
+export interface JefeoperacionesRelations {
   // describe navigational properties here
 }
 
-export type PropietarioWithRelations = Propietario & PropietarioRelations;
+export type JefeoperacionesWithRelations = Jefeoperaciones & JefeoperacionesRelations;

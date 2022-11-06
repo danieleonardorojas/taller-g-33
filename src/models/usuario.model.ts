@@ -6,10 +6,15 @@ export class Usuario extends Entity {
   @property({
     type: 'string',
     id: true,
-    generated: false,
+    generated: true,
+  })
+  idusuario?: string;
+
+  @property({
+    type: 'string',
     required: true,
   })
-  idUsuario: string;
+  tipo: string;
 
   @property({
     type: 'string',
@@ -19,30 +24,27 @@ export class Usuario extends Entity {
 
   @property({
     type: 'string',
+    required: true,
   })
-  apellidos?: string;
+  apellidos: string;
 
   @property({
     type: 'string',
+    required: true,
   })
-  telefono?: string;
+  telefono: string;
 
   @property({
     type: 'date',
+    required: true,
   })
-  fechaNacimiento?: string;
+  fechanacimiento: string;
 
   @property({
     type: 'string',
     required: true,
   })
   contrasenia: string;
-
-  @property({
-    type: 'string',
-    required: true,
-  })
-  tipoUsuario: string;
 
   @belongsTo(() => Sede)
   sedeId: string;

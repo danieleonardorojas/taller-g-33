@@ -5,7 +5,7 @@ import {Propietario, PropietarioRelations} from '../models';
 
 export class PropietarioRepository extends DefaultCrudRepository<
   Propietario,
-  typeof Propietario.prototype.ciudadResidencia,
+  typeof Propietario.prototype.idpropietario,
   PropietarioRelations
 > {
   constructor(

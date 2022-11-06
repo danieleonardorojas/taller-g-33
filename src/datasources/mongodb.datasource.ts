@@ -4,9 +4,10 @@ import {juggler} from '@loopback/repository';
 const config = {
   name: 'mongodb',
   connector: 'mongodb',
-  url: '',
-  host: 'mongodb%2Bsrv%3A%2F%2Fcodeccouser%3Aadmin%40clustercodecco.eayzk1k.mongodb.net%2Fbd_g_33%3FretryWrites%3Dtrue%26w%3Dmajority',
-  //host: 'mongodb+srv://codeccouser:admin@clustercodecco.eayzk1k.mongodb.net/bd_g_33?retryWrites=true&w=majority',
+  url: 'mongodb+srv://codeccouser:admin@clustercodecco.eayzk1k.mongodb.net/bd_g_33?retryWrites=true&w=majority',
+  //url: 'mongodb%2Bsrv%3A%2F%2Fcodeccouser%3Aadmin%40clustercodecco.eayzk1k.mongodb.net%2Fbd_g_33%3FretryWrites%3Dtrue%26w%3Dmajority',
+  //url: 'mongodb+srv://codeccouser:admin@clustercodecco.eayzk1k.mongodb.net/bd_g_33?retryWrites=true&w=majority',
+  host:'',
   port: 0,
   user: '',
   password: '',

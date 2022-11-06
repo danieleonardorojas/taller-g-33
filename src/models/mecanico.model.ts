@@ -1,13 +1,13 @@
 import {Entity, model, property} from '@loopback/repository';
 
 @model()
-export class Propietario extends Entity {
+export class Mecanico extends Entity {
   @property({
     type: 'string',
     id: true,
     generated: true,
   })
-  idpropietario?: string;
+  idmecanico?: string;
 
   @property({
     type: 'string',
@@ -17,8 +17,9 @@ export class Propietario extends Entity {
 
   @property({
     type: 'string',
+    required: true,
   })
-  apellidos?: string;
+  apellidos: string;
 
   @property({
     type: 'string',
@@ -40,42 +41,33 @@ export class Propietario extends Entity {
 
   @property({
     type: 'string',
-    required: true,
   })
-  tipousuario: string;
+  tipousuario?: string;
 
   @property({
     type: 'string',
-    required: true,
   })
-  ciudadresidencia: string;
+  direccion?: string;
 
   @property({
     type: 'string',
-    required: true,
   })
-  correo: string;
+  nivelestudio?: string;
 
   @property({
     type: 'array',
     itemType: 'string',
   })
-  listavehiculos?: string[];
-
-  @property({
-    type: 'array',
-    itemType: 'string',
-  })
-  listanotificaciones?: string[];
+  sede?: string[];
 
 
-  constructor(data?: Partial<Propietario>) {
+  constructor(data?: Partial<Mecanico>) {
     super(data);
   }
 }
 
-export interface PropietarioRelations {
+export interface MecanicoRelations {
   // describe navigational properties here
 }
 
-export type PropietarioWithRelations = Propietario & PropietarioRelations;
+export type MecanicoWithRelations = Mecanico & MecanicoRelations;
